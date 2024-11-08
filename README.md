@@ -75,6 +75,7 @@ This Terraform configuration sets up a Google Cloud environment with a virtual m
 - **Disk Types**: The configuration uses `pd-balanced` for the attached disk and `pd-standard` for the boot disk. Adjust as necessary depending on your cost and performance requirements.
 - **Snapshot Schedule**: The snapshot policy retains snapshots for 10 days and takes snapshots weekly on Sundays at 00:00 UTC.
 - **Ignore Changes**: The configuration includes a lifecycle rule to ignore changes to attached disks on the instance, ensuring stability when managing multiple disk attachments.
+- **Additions**: There is also a script to partition, format and mount the disk to an existing vm instance.
 
 ## Clean Up
 
